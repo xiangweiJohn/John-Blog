@@ -78,10 +78,8 @@ public class CoreApplication {
 
         //Set the port number on which we listen for requests.
         // @param port The new port number
-        //localhost test port
-        //connector.setPort(8080);
         //release port
-        connector.setPort(80);
+        connector.setPort(8080);
 
         //Set the secure connection flag that will be assigned to requests received through this connector.
         //@param secure The new secure connection flag
