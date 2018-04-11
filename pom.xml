@@ -27,7 +27,7 @@
 	</parent>
 
 	<!--修改镜像地址  -->
-	<repositories>
+	<!-- <repositories>
 		<repository>
 			<id>spring-releases</id>
 			<url>https://repo.spring.io/libs-release</url>
@@ -39,7 +39,7 @@
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
 	</pluginRepositories>
-
+ -->
 	<properties>
 		<docker.image.prefix>blog</docker.image.prefix>
 		<docker.plugin.version>0.3.258</docker.plugin.version>
