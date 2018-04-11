@@ -1,11 +1,17 @@
 package com.my.blog.website;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.apache.catalina.Context;
+import org.apache.catalina.connector.Connector;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.tomcat.util.descriptor.web.SecurityCollection;
+import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -72,7 +78,7 @@ public class CoreApplication {
 
         //Set the port number on which we listen for requests.
         // @param port The new port number
-        connector.setPort(80);       
+        connector.setPort(8080);       
 
         //Set the secure connection flag that will be assigned to requests received through this connector.
         //@param secure The new secure connection flag
@@ -80,7 +86,7 @@ public class CoreApplication {
         connector.setSecure(false);
 
         //redirectPort The redirect port number (non-SSL to SSL)
-        connector.setRedirectPort(443);
+        connector.setRedirectPort(8443);
         return connector;
     }
 
