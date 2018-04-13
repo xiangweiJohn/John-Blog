@@ -62,12 +62,14 @@ public class CoreApplication {
 //                collection.addPattern("/*");
 //                constraint.addCollection(collection);
 //                context.addConstraint(constraint);
+//                
+//                
 //            }
 //        };
-//        tomcat.addAdditionalTomcatConnectors(httpConnector());
+//        //tomcat.addAdditionalTomcatConnectors(httpConnector());
 //        return tomcat;
 //    }
-//        
+        
 //    @Bean
 //    public Connector httpConnector() {
 //        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
@@ -90,7 +92,7 @@ public class CoreApplication {
 //        connector.setSecure(false);
 //
 //        //redirectPort The redirect port number (non-SSL to SSL)
-//        connector.setRedirectPort(8443);
+//        connector.setRedirectPort(443);
 //        return connector;
 //    }
 
