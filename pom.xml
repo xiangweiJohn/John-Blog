@@ -26,20 +26,6 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<!--修改镜像地址  -->
-	<!-- <repositories>
-		<repository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</pluginRepository>
-	</pluginRepositories>
- -->
 	<properties>
 		<docker.image.prefix>blog</docker.image.prefix>
 		<docker.plugin.version>0.3.258</docker.plugin.version>
@@ -181,7 +167,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-
 			</plugin>
 		</plugins>
 	</build>
