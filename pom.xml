@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.my.blog.website</groupId>
-	<artifactId>my-blog</artifactId>
+	<groupId>com.john.blog.website</groupId>
+	<artifactId>john-blog</artifactId>
 	<!-- now -->
 	<version>3.3.0-SNAPSHOT</version>
 	<!-- version的时间节点 -->
@@ -16,8 +16,8 @@
 	<!--<version>2.0.1-SNAPSHOT</version> -->
 	<packaging>jar</packaging>
 
-	<name>my-blog</name>
-	<description>my-blog</description>
+	<name>john-blog</name>
+	<description>john-blog</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
