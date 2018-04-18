@@ -1,11 +1,9 @@
 package com.john.blog.website.constant;
 
-import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+
+import org.springframework.stereotype.Component;
 
 /**
  * Created by john on 2018/4/17.
