@@ -7,9 +7,9 @@ env_args="-Xms128m -Xmx128m"
 sleeptime=0
 arglen=$#
 
-# get my-blog pid
+# get john-blog pid
 get_pid(){
-    pname="`find .. -name 'my-blog*.jar'`"
+    pname="`find .. -name 'john-blog*.jar'`"
     pname=${pname:3}
     pid=`ps -ef | grep $pname | grep -v grep | awk '{print $2}'`
     echo "$pid"
@@ -24,11 +24,11 @@ startup(){
     then
         echo "Blog already startup!"
     else
-        jar_path=`find .. -name 'my-blog*.jar'`
+        jar_path=`find .. -name 'john-blog*.jar'`
         echo "jarfile=$jar_path"
-        cmd="java $1 -jar $jar_path > ./my-blog.out < /dev/null &"
+        cmd="java $1 -jar $jar_path > ./john-blog.out < /dev/null &"
         echo "cmd: $cmd"
-        java $1 -jar $jar_path > ./my-blog.out < /dev/null &
+        java $1 -jar $jar_path > ./john-blog.out < /dev/null &
         show_log
     fi
 }
@@ -45,12 +45,12 @@ shut_down(){
 }
 
 show_log(){
-    tail -f my-blog.out
+    tail -f john-blog.out
 }
 
 show_help(){
     echo -e "\r\n\t欢迎使用Blog"
-    echo -e "\r\nUsage: sh my-blog.sh start|stop|reload|status|log"
+    echo -e "\r\nUsage: sh john-blog.sh start|stop|reload|status|log"
     exit
 }
 
