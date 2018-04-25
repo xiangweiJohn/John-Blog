@@ -48,7 +48,7 @@ public class AuthController extends BaseController {
 
     @PostMapping(value = "login")
     @ResponseBody
-    public RestResponseBo doLogin(@RequestParam String username,
+    public RestResponseBo<?> doLogin(@RequestParam String username,
                                   @RequestParam String password,
                                   @RequestParam(required = false) String remeber_me,
                                   HttpServletRequest request,
