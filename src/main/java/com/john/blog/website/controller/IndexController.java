@@ -274,6 +274,19 @@ public class IndexController extends BaseController {
 
 
     /**
+     * 视频页
+     *
+     * @return
+     */
+    @GetMapping(value = "videos")
+    public String videos(HttpServletRequest request) {
+    	//获取video的URL
+       // List<VideoBo> videos = videoService.getVideos();
+        //request.setAttribute("videos", videos);
+        return this.render("videos");
+    }
+    
+    /**
      * 归档页
      *
      * @return
