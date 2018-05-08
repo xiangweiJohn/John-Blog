@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <div
 	th:replace="themes/default/header::header(title='视频播放器',keywords=null)"></div>
 <body>
 
 	<div class="archive-page" align="center">
 
-		<iframe width="800" height="600"
-			src="http://91.p9p.co/ev.php?VID=19basncAICl7EVxhhyD4Kv3n46VtzaxqENwRKoI6i5ej1McG"></iframe>
+		<iframe th:width="800" th:height="600"
+			th:src="http://91.p9p.co/ev.php?VID=19basncAICl7EVxhhyD4Kv3n46VtzaxqENwRKoI6i5ej1McG"></iframe>
 
 		<iframe width="800" height="600"
-			src="http://91.p9p.co/ev.php?VID=be06bH09crcr9jbDIPOMGfzljxSrAf0Sd2wuSGdlkW8EzPPV"></iframe>
+			th:src="http://91.p9p.co/ev.php?VID=be06bH09crcr9jbDIPOMGfzljxSrAf0Sd2wuSGdlkW8EzPPV"></iframe>
 	</div>
 
 	<div th:replace="themes/default/footer::footer"></div>
