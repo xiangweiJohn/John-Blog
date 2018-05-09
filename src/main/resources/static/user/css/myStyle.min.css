@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.my-clearfix {
+	float: none;
+	clear: both;
+}
+
+.my-header {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.my-hd-c {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+}
+
+.my-hd-c .my-banner {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.my-content {
+	text-align: center;
+}
+
+.my-banner .show-hidden {
+	position: absolute;
+	top: 0%; /*悬浮相对于背景位置 */
+	left: 0%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	width: 20.84%; /*图片宽度大小 */
+}
+
+.my-banner .musics {
+	position: absolute;
+	bottom: 8%; /*悬浮相对于背景位置的一半 */
+	left: 0.9%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	width: 19.85%; /*图片宽度大小 */
+}
+
+.my-banner .audio {
+	position: absolute;
+	bottom: 8%; /*悬浮相对于背景位置的一半 */
+	left: 0%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	width: 100%; /*图片宽度大小 */
+}
+
+.my-banner .my-pic {
+	position: relative;
+	width: 100%;
+	height: auto;
+	text-align: left;
+}
+
+.my-banner .bg-musc {
+	_display: none;
+	width: 300px;
+	height: 88px;
+	margin: 0 auto;
+}
+
+.my-banner .show-hidden .my-changing-over {
+	float: left;
+	margin: 0px;
+	width: 13px;
+	height: 88px;
+	text-align: center
+}

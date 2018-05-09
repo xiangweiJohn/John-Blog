@@ -1,4 +1,4 @@
-@charset "UTF-8"; 
+@charset "UTF-8";
 
 * {
 	-webkit-box-sizing: border-box;
@@ -1796,7 +1796,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 100%{
 -webkit-transform
+
+
 :translateY(0)
+
+
 }
 }
 @
@@ -1807,9 +1811,18 @@ keyframes slideDown { 0%{
 
 100%{
 -webkit-transform
+
+
 :translateY(0)
-;transform
+
+
+;
+transform
+
+
 :translateY(0)
+
+
 }
 }
 @
@@ -1819,7 +1832,11 @@ keyframes slideDown { 0%{
 
 100%{
 -webkit-transform
+
+
 :translateY(-80px)
+
+
 }
 }
 @
@@ -1830,9 +1847,18 @@ keyframes slideUp { 0%{
 
 100%{
 -webkit-transform
+
+
 :translateY(-80px)
-;transform
+
+
+;
+transform
+
+
 :translateY(-80px)
+
+
 }
 }
 @
@@ -1843,9 +1869,18 @@ keyframes fade-in { 0%{
 
 100%{
 transform
+
+
 :translateY(0)
-;opacity
+
+
+;
+opacity
+
+
 :
+
+
 1
 }
 }
@@ -1856,13 +1891,18 @@ transform
 }
 100%{
 -webkit-transform
+
+
 :translateY(0)
-;opacity
+
+
+;
+opacity
+
+
 :
+
+
 1
 }
-}
-
-.video {
-	padding: 120px 20px 40px
 }

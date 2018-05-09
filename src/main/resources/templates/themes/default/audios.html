@@ -1,102 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="audios">
+<head>
+<link th:href="@{/user/css/myStyle.min.css}" rel="stylesheet" />
+</head>
 
 <body>
+
 	<!-- 添加背景音乐 -->
-	<div th:align="left">
-		<th:block>
-			<div>
-				<audio th:controls="controls" th:id="0" th:autoplay="autoplay"
-					hidden="true" th:onended="'javascript:playNext();'">
+	<!-- 隐藏显示播放器的图标 -->
 
-				</audio>
+	<div class="my-header my-clearfix">
+		<div class="my-hd-c">
+			<div class="my-banner">
+				<div class="my-pic">
+					<!-- 背景图 -->
+					<img th:src="@{/user/img/music/bg-musc.png}" class="bg-musc"
+						alt="banner" />
+
+				</div>
+				<div class="show-hidden">
+					<!--悬浮图  -->
+					<img class="my-changing-over" onclick="isHidden()"
+						th:src=" @{/user/img/music/show-hidden.png}" />
+
+				</div>
+
+				<div class="musics">
+					<audio th:controls="controls" th:id="0" th:autoplay="autoplay"
+						class="audio" th:onended="'javascript:playNext();'">
+					</audio>
+				</div>
 			</div>
-		</th:block>
-
+		</div>
 	</div>
-
-	<script th:inline="javascript">
-		/*<![CDATA[*/
-
-		$(document).ready(function() {
-			//1:获取当前网址
-			var curPath = window.document.location.href;
-			//alert(curPath);
-			//2：拼接ajax的url需要写的值
-			var url = curPath + "audios";
-			//alert(url);
-			//3:向后台请求audios集合数据
-			$.ajax({
-				async : "false",//async必须设为false，不然获取不到audios的Json集合数据
-				url : url,
-				type : "GET",
-				dataType : "json",
-				success : function(data) {
-					//alert(data);
-					//alert(data[0].src);
-					//4:设audios为全局变量，以便playNext()函数使用
-					audios = data;
-					//5：开始播放
-					playStart(audios);
-				},
-				error : function(jqXHR, textStatus, errorThrown) {
-					/*弹出jqXHR对象的信息*/
-					alert(jqXHR.responseText);
-					alert(jqXHR.status);
-					alert(jqXHR.readyState);
-					alert(jqXHR.statusText);
-					/*弹出其他两个参数的信息*/
-					alert(textStatus);
-					alert(errorThrown);
-				}
-			});
-
-		});
-
-		//开始播放歌曲
-		function playStart(audios) {
-
-			//1:获得audios的Json对象集合中第一首audio的src
-			var srcFirst = audios[0].src;
-			//alert(srcFirst);
-
-			//2:获取audios的对象集合的长度.变量前面不写var表示全局
-			audioslength = audios.length;
-
-			//3:将第一首audio的src赋予当前播放歌曲的src
-			$("audio").attr("src", srcFirst);
-
-			//测试 audios集合的长度
-			//alert(audiosObj.length);
-
-		}
-
-		//播放下一首歌曲
-		function playNext() {
-			//测试
-			//alert(audiosObj.length);
-
-			//1：获取当前播放完的歌曲id,下一首即将要播放的歌曲在audios的对象那个集合中的index由此id加1得出
-			var indexNext = parseInt($("audio").attr("id")) + 1;
-			//alert(indexNext);
-
-			//2:设置下一首播放歌曲的src
-			if (indexNext >= audioslength) {//如果下一首要播放的歌曲的index已经越界
-				//从头开始播放
-				$("audio").attr("id", "0");
-				var srcFirst = audios[0].src;
-				$("audio").attr("src", srcFirst);
-			} else {//indexNex没有越界
-				//将当前播放歌曲的id改为indexNext
-				$("audio").attr("id", indexNext);
-				var srcNext = audios[indexNext].src;
-				$("audio").attr("src", srcNext);
-
-			}
-
-		}
-		/*]]>*/
-	</script>
-
+	<script th:src="@{/user/js/audios.js}" th:inline="javascript"></script>
 </body>
 </html>
