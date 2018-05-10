@@ -31,17 +31,8 @@
 			</div>
 		</div>
 
-		<div align="center" hidden="true">
-			<!-- 爱你 -->
-			<!-- <iframe class="iframe" width="400"
-				src="//music.163.com/outchain/player?type=2&amp;id=366752&amp;auto=1&amp;height=66"></iframe>
-				天空之城
-			<iframe class="iframe" width="400"
-				src="//music.163.com/outchain/player?type=2&amp;id=25721157&amp;auto=0&amp;height=66"></iframe> -->
-				<!-- 淘汰 -->
-			<iframe class="iframe" width="400" 
-				src="http://m10.music.126.net/20180426011503/ca6a54f9de7a75caa4775fb5be2951f7/ymusic/96ad/979d/388d/cc4112b4da9dc60264cddee495150ee9.mp3"></iframe>
-		</div>
+
+		<div th:replace="themes/default/audios::audios"></div>
 
 		<div class="footer-meta">
 			<div class="footer-container">
@@ -76,6 +67,7 @@
 		</div>
 		<script>
         /*<![CDATA[*/
+        	 
         var postDirectoryBuild = function () {
             var postChildren = function children(childNodes, reg) {
                         var result = [],
@@ -222,6 +214,7 @@
         }
     });
     InstantClick.init('mousedown');
+    
     /*]]>*/
 </script>
 </body>

@@ -5,11 +5,8 @@
 
 	<groupId>com.john.blog.website</groupId>
 	<artifactId>john-blog</artifactId>
-	<!--  
-	     3.3.0 represent the 8443 port
-	     3.3.1 represent the 8444 port
-	     3.3.2 represent the 8445 port
-		-->
+	<!-- 3.3.0 represent the 8443 port 3.3.1 represent the 8444 port 3.3.2 represent 
+		the 8445 port -->
 	<version>3.3.0-SNAPSHOT</version>
 	<!-- version的时间节点 -->
 	<!-- Tale -->
@@ -31,8 +28,7 @@
 	</parent>
 
 	<properties>
-		<!-- <docker.image.prefix>blog</docker.image.prefix>
-		<docker.plugin.version>0.3.258</docker.plugin.version> -->
+		<!-- <docker.image.prefix>blog</docker.image.prefix> <docker.plugin.version>0.3.258</docker.plugin.version> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -171,6 +167,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork><!-- 配置热部署 -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

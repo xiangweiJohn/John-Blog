@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="audios">
+<head>
+<link th:href="@{/user/css/myStyle.min.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+	<!-- 添加背景音乐 -->
+	<!-- 隐藏显示播放器的图标 -->
+
+	<div class="my-header my-clearfix">
+		<div class="my-hd-c">
+			<div class="my-banner">
+				<div class="bg">
+					<!-- 背景图 -->
+					<img th:src="@{/user/img/music/bg-musc.png}" class="bg-musc"
+						alt="banner" />
+
+				</div>
+				<div class="show-hidden">
+					<!--悬浮图  -->
+					<img class="my-changing-over" onclick="isHidden()"
+						th:src=" @{/user/img/music/show-hidden.png}" />
+
+				</div>
+
+				<div class="musics">
+					<audio th:controls="controls" th:id="0" th:autoplay="autoplay"
+						class="audio" th:onended="'javascript:playNext();'">
+					</audio>
+				</div>
+
+				<div class="previous">
+					<img onclick="previous()" th:src=" @{/user/img/music/previous.png}"
+						title="上一曲" class="preImg" />
+				</div>
+				<div class="next">
+					<img onclick="next()" th:src=" @{/user/img/music/next.png}"
+						title="下一曲" class="nextImg" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:src="@{/user/js/audios.js}" th:inline="javascript"></script>
+	<script th:inline="javascript">
+		/* <![CDATA[ */
+
+		/* ]]> */
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div
+	th:replace="themes/default/header::header(title='视频播放器',keywords=null)"></div>
+<body>
+
+	<div class="archive-page" align="center">
+
+		<iframe th:width="800" th:height="600"
+			src="https://www.imooc.com/video/16783"> </iframe>
+
+	</div>
+
+
+</body>
+<div th:replace="themes/default/footer::footer"></div>
+</html>
