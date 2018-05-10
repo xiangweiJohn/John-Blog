@@ -43,7 +43,7 @@
 
 .my-banner .musics {
 	position: absolute;
-	bottom: 8%; /*悬浮相对于背景位置的一半 */
+	bottom: 8%; /*悬浮相对于背景位置 */
 	left: 0.9%; /*相对于左边 */
 	z-index: 2; /* 让图片悬浮于背景之上 */
 	width: 19.85%; /*图片宽度大小 */
@@ -51,13 +51,13 @@
 
 .my-banner .audio {
 	position: absolute;
-	bottom: 8%; /*悬浮相对于背景位置的一半 */
+	bottom: 8%; /*悬浮相对于背景位置 */
 	left: 0%; /*相对于左边 */
 	z-index: 2; /* 让图片悬浮于背景之上 */
-	width: 100%; /*图片宽度大小 */
+	width: 95%; /*图片宽度大小 */
 }
 
-.my-banner .my-pic {
+.my-banner .bg {
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -66,9 +66,48 @@
 
 .my-banner .bg-musc {
 	_display: none;
-	width: 300px;
+	width: 363px;
 	height: 88px;
 	margin: 0 auto;
+}
+
+.my-banner .previous {
+	position: absolute;
+	bottom: 8%; /*悬浮相对于背景位置 */
+	left: 25%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	/*width: 10%; /*图片宽度大小 */
+	width: 88px;
+	height: 88px;
+}
+
+.my-banner .previous .preImg {
+	position: absolute;
+	bottom: 0%; /*悬浮相对于背景位置 */
+	left: -87%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	width: 40px;
+	height: 40px;
+}
+
+.my-banner .next {
+	position: absolute;
+	bottom: 8%; /*悬浮相对于背景位置 */
+	left: 25%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	/*width: 10%; /*图片宽度大小 */
+	width: 88px;
+	height: 88px;
+}
+
+.my-banner .next .nextImg{
+	position: absolute;
+	bottom: 0%; /*悬浮相对于背景位置 */
+	left: -42%; /*相对于左边 */
+	z-index: 2; /* 让图片悬浮于背景之上 */
+	/*width: 10%; /*图片宽度大小 */
+	width: 40px;
+	height: 40px;
 }
 
 .my-banner .show-hidden .my-changing-over {
