@@ -1,7 +1,7 @@
 /* <![CDATA[ */
 
+//页面加载完成通过ajax向后台获取audio数据
 $(document).ready(function() {
-
 	// 1:获取当前网址
 	var curPath = window.document.location.href;
 	// alert(curPath);
@@ -42,8 +42,28 @@ $(document).ready(function() {
 			alert(errorThrown);
 		}
 	});
+	// bgColor();
 
 });
+
+// 部分手机在加载页面时，如果有音、视频需要用户与浏览器有个交互过程才能播放
+// 于是采用下面的方式，当用户随便点击页面一次时(该函数只会执行一次)，实现自动播放
+$('html').one('touchstart', function() {
+	var audio = document.getElementsByClassName("audio")[0];
+	audio.play();
+	// alert("hello");
+});
+
+// 给播放器添加背景色
+function bgColor() {
+	// 获取audio对象
+	var audio = document.getElementsByClassName("audio")[0];
+	// 设置背景色
+	// audio.style.backgroundColor("#444444");
+	var color = audio.style.backgroundColor;
+	alert("color");
+	alert(color);
+}
 
 // 开始播放歌曲
 function playStart(audios) {
@@ -63,7 +83,7 @@ function playStart(audios) {
 
 }
 
-// 播放下一首歌曲
+// 自动播放下一首歌曲
 function playNext() {
 	// 测试
 	// alert(audiosObj.length);
@@ -89,32 +109,13 @@ function playNext() {
 }
 
 function isHidden() {
-	// 1:获取music类的属性hidden
-	var isHidden = $(".audio").attr("hidden");
-	// alert(isHidden);
+	var isHidden = $(".my-banner").attr("hidden");
 	if (isHidden != "hidden") {// 如果播放器没隐藏
-		// 2:给audio的div添加hidden属性
-		$(".audio").attr("hidden", "hidden");
-		// 3:给preImg的div添加hidden属性
-		$(".preImg").attr("hidden", "hidden");
-		// 4:给nextImg的div添加hidden属性
-		$(".nextImg").attr("hidden", "hidden");
-		// 5:将背景图的改为白色
-		// alert($(".bg-musc").attr("src"));
-		$(".bg-musc").attr("src", "/user/img/music/hidden.png");
-		$(".preImg").attr("src", "/user/img/music/hidden.png");
-		$(".nextImg").attr("src", "/user/img/music/hidden.png");
-	} else {// 如果播放器隐藏了
-		// 将audio的div属性hidden删除
-		$(".audio").removeAttr("hidden");
-		$(".preImg").removeAttr("hidden");
-		$(".nextImg").removeAttr("hidden");
-		// 将背景图的改为播放器背景
-		$(".bg-musc").attr("src", "/user/img/music/bg-musc.png");
-		$(".preImg").attr("src", "/user/img/music/previous.png");
-		$(".nextImg").attr("src", "/user/img/music/next.png");
-	}
+		$(".my-banner").attr("hidden", "Hidden");
 
+	} else {// 如果播放器隐藏了
+		$(".my-banner").removeAttr("hidden");
+	}
 }
 
 function previous() {
@@ -159,6 +160,7 @@ function previous() {
 }
 
 function next() {
+	// alert("next");
 	// 1:获得audio元素对象 通过jquery获取的某些元素对象无法实现元素对象的某些方法 比如audio
 	var audio = $(".audio");
 	// alert(audio.attr("autoplay"));
