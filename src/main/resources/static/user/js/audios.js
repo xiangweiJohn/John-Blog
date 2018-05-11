@@ -109,32 +109,13 @@ function playNext() {
 }
 
 function isHidden() {
-	// 1:获取music类的属性hidden
-	var isHidden = $(".audio").attr("hidden");
-	// alert(isHidden);
+	var isHidden = $(".my-banner").attr("hidden");
 	if (isHidden != "hidden") {// 如果播放器没隐藏
-		// 2:给audio的div添加hidden属性
-		$(".audio").attr("hidden", "hidden");
-		// 3:给preImg的div添加hidden属性
-		$(".preImg").attr("hidden", "hidden");
-		// 4:给nextImg的div添加hidden属性
-		$(".nextImg").attr("hidden", "hidden");
-		// 5:将背景图的改为白色
-		// alert($(".bg-musc").attr("src"));
-		$(".bg-musc").attr("src", "/user/img/music/hidden.png");
-		$(".preImg").attr("src", "/user/img/music/hidden.png");
-		$(".nextImg").attr("src", "/user/img/music/hidden.png");
-	} else {// 如果播放器隐藏了
-		// 将audio的div属性hidden删除
-		$(".audio").removeAttr("hidden");
-		$(".preImg").removeAttr("hidden");
-		$(".nextImg").removeAttr("hidden");
-		// 将背景图的改为播放器背景
-		$(".bg-musc").attr("src", "/user/img/music/bg-musc.png");
-		$(".preImg").attr("src", "/user/img/music/previous.png");
-		$(".nextImg").attr("src", "/user/img/music/next.png");
-	}
+		$(".my-banner").attr("hidden", "Hidden");
 
+	} else {// 如果播放器隐藏了
+		$(".my-banner").removeAttr("hidden");
+	}
 }
 
 function previous() {
