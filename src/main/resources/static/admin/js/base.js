@@ -1,5 +1,5 @@
 /**
- *  Tale全局函数对象   var tale = new $.tale();
+ * Tale全局函数对象 var tale = new $.tale();
  */
 $.extend({
     tale: function () {
@@ -7,35 +7,37 @@ $.extend({
 });
 
 /**
- * tale alert删除  // todo: 减少耦合度,链式操作替代  2017-02-27
+ * tale alert删除 // todo: 减少耦合度,链式操作替代 2017-02-27
+ * 
  * @param options
  */
 // $.tale.prototype.alert_del = function (options) {
-//     swal({
-//         title: options.title || '警告信息',
-//         text: options.text || "确定删除吗？",
-//         type: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: '确定',
-//         cancelButtonText: '取消'
-//     }).then(function () {
-//         $.post(options.url, options.parame, function (result) {
-//             if (result && result.success) {
-//                 swal('提示信息', '删除成功', 'success');
-//                 setTimeout(function () {
-//                     window.location.reload();
-//                 }, 2000);
-//             } else {
-//                 swal("提示消息", result.msg, 'error');
-//             }
-//         });
-//     }).catch(swal.noop);
+// swal({
+// title: options.title || '警告信息',
+// text: options.text || "确定删除吗？",
+// type: 'warning',
+// showCancelButton: true,
+// confirmButtonColor: '#3085d6',
+// cancelButtonColor: '#d33',
+// confirmButtonText: '确定',
+// cancelButtonText: '取消'
+// }).then(function () {
+// $.post(options.url, options.parame, function (result) {
+// if (result && result.success) {
+// swal('提示信息', '删除成功', 'success');
+// setTimeout(function () {
+// window.location.reload();
+// }, 2000);
+// } else {
+// swal("提示消息", result.msg, 'error');
+// }
+// });
+// }).catch(swal.noop);
 // };
 
 /**
  * 成功弹框
+ * 
  * @param options
  */
 $.tale.prototype.alertOk = function (options) {
@@ -50,6 +52,7 @@ $.tale.prototype.alertOk = function (options) {
 
 /**
  * 弹出成功，并在500毫秒后刷新页面
+ * 
  * @param text
  */
 $.tale.prototype.alertOkAndReload = function (text) {
@@ -62,6 +65,7 @@ $.tale.prototype.alertOkAndReload = function (text) {
 
 /**
  * 警告弹框
+ * 
  * @param options
  */
 $.tale.prototype.alertWarn = function (options) {
@@ -75,6 +79,7 @@ $.tale.prototype.alertWarn = function (options) {
 
 /**
  * 询问确认弹框，这里会传入then函数进来
+ * 
  * @param options
  */
 $.tale.prototype.alertConfirm = function (options) {
@@ -88,6 +93,7 @@ $.tale.prototype.alertConfirm = function (options) {
 
 /**
  * 错误提示
+ * 
  * @param options
  */
 $.tale.prototype.alertError = function (options) {
@@ -100,6 +106,7 @@ $.tale.prototype.alertError = function (options) {
 
 /**
  * 公共弹框
+ * 
  * @param options
  */
 $.tale.prototype.alertBox = function (options) {
@@ -122,8 +129,9 @@ $.tale.prototype.alertBox = function (options) {
 
 /**
  * 全局post函数
- *
- * @param options   参数
+ * 
+ * @param options
+ *            参数
  */
 $.tale.prototype.post = function (options) {
     var self = this;
@@ -131,7 +139,8 @@ $.tale.prototype.post = function (options) {
         type: 'POST',
         url: options.url,
         data: options.data || {},
-        async: options.async || false,
+// async: options.async || false,
+        async: options.async || true,
         dataType: 'json',
         success: function (result) {
             self.hideLoading();
