@@ -29,7 +29,8 @@ html {
 }
 
 ::selection {
-	color: #fff;
+	/* color: #fff; */
+	color: #414141;
 	background-color: #6fa3ef
 }
 
@@ -1798,7 +1799,35 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 -webkit-transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -1813,14 +1842,70 @@ keyframes slideDown { 0%{
 -webkit-transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ;
 transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -1834,7 +1919,35 @@ transform
 -webkit-transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(-80px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -1849,14 +1962,70 @@ keyframes slideUp { 0%{
 -webkit-transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(-80px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ;
 transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(-80px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -1871,14 +2040,70 @@ keyframes fade-in { 0%{
 transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ;
 opacity
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 1
@@ -1893,14 +2118,70 @@ opacity
 -webkit-transform
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ;
 opacity
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 1

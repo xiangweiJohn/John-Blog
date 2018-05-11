@@ -1,7 +1,7 @@
 /* <![CDATA[ */
 
+//页面加载完成通过ajax向后台获取audio数据
 $(document).ready(function() {
-
 	// 1:获取当前网址
 	var curPath = window.document.location.href;
 	// alert(curPath);
@@ -42,8 +42,28 @@ $(document).ready(function() {
 			alert(errorThrown);
 		}
 	});
+	// bgColor();
 
 });
+
+// 部分手机在加载页面时，如果有音、视频需要用户与浏览器有个交互过程才能播放
+// 于是采用下面的方式，当用户随便点击页面一次时(该函数只会执行一次)，实现自动播放
+$('html').one('touchstart', function() {
+	var audio = document.getElementsByClassName("audio")[0];
+	audio.play();
+	// alert("hello");
+});
+
+// 给播放器添加背景色
+function bgColor() {
+	// 获取audio对象
+	var audio = document.getElementsByClassName("audio")[0];
+	// 设置背景色
+	// audio.style.backgroundColor("#444444");
+	var color = audio.style.backgroundColor;
+	alert("color");
+	alert(color);
+}
 
 // 开始播放歌曲
 function playStart(audios) {
@@ -63,7 +83,7 @@ function playStart(audios) {
 
 }
 
-// 播放下一首歌曲
+// 自动播放下一首歌曲
 function playNext() {
 	// 测试
 	// alert(audiosObj.length);
@@ -159,6 +179,7 @@ function previous() {
 }
 
 function next() {
+	// alert("next");
 	// 1:获得audio元素对象 通过jquery获取的某些元素对象无法实现元素对象的某些方法 比如audio
 	var audio = $(".audio");
 	// alert(audio.attr("autoplay"));
